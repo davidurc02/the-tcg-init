@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -6,6 +6,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+
+import { DashboardDispatch } from '.'
 
 const drawerWidth = 240;
 
@@ -34,7 +36,8 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function MiniDrawer(props) {
-    const classes = useStyles();
+    const classes = useStyles()
+    const dispatch = useContext(DashboardDispatch)
 
     return (
         <AppBar
@@ -47,7 +50,7 @@ export default function MiniDrawer(props) {
                 <IconButton
                     color="inherit"
                     aria-label="Open drawer"
-                    onClick={props.handleDrawerToggle}
+                    onClick={() => dispatch()}
                     edge="start"
                     className={clsx(classes.menuButton, {
                         [classes.hide]: props.open,

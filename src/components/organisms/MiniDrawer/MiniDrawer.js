@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -14,6 +14,8 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 
 import { Link as RouterLink } from 'react-router-dom';
+
+import { DashboardDispatch } from '.'
 
 const drawerWidth = 240;
 
@@ -83,6 +85,7 @@ const AdapterLink = React.forwardRef((props, ref) => <RouterLink innerRef={ref} 
 export default function MiniDrawer(props) {
     const classes = useStyles();
     const theme = useTheme();
+    const dispatch = useContext(DashboardDispatch)
 
     return (
         <Drawer
@@ -100,7 +103,7 @@ export default function MiniDrawer(props) {
             open={props.open}
         >
             <div className={classes.toolbar}>
-                <IconButton onClick={props.handleDrawerToggle}>
+                <IconButton onClick={() => dispatch()}>
                     {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
                 </IconButton>
             </div>
