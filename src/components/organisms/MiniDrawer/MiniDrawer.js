@@ -13,6 +13,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 
+import { Link as RouterLink } from 'react-router-dom';
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
@@ -76,6 +78,8 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
+const AdapterLink = React.forwardRef((props, ref) => <RouterLink innerRef={ref} {...props} />)
+
 export default function MiniDrawer(props) {
     const classes = useStyles();
     const theme = useTheme();
@@ -117,6 +121,10 @@ export default function MiniDrawer(props) {
                         <ListItemText primary={text} />
                     </ListItem>
                 ))}
+                <ListItem button component={AdapterLink} to={'/pruebaprueba'} >
+                    <ListItemIcon><InboxIcon /></ListItemIcon>
+                    <ListItemText primary={'Galería'} />
+                </ListItem>
             </List>
         </Drawer>
     );

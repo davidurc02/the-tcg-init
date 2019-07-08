@@ -2,9 +2,14 @@ import React from 'react';
 //import logo from './logo.svg';
 import './App.css';
 import MiniDrawer from './components/organisms/MiniDrawer'
+import { MemoryRouter as Router } from 'react-router'
 
 function App() {
-  return <MiniDrawer />
+  return (
+    <Router>
+      <MiniDrawer />
+    </Router>
+  )
   // return (
   //   <div className="App">
   //     <header className="App-header">

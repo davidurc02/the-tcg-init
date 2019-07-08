@@ -125,7 +125,7 @@ function Header() {
 
 export default function MiniDrawerIndex() {
 	const classes = useStyles();
-	const [open, setOpen] = React.useState(false);
+	const [open, setOpen] = React.useState(true);
 
 	function handleDrawerToggle() {
 		setOpen(!open);
@@ -161,7 +161,6 @@ export default function MiniDrawerIndex() {
                     nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
                     accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.
         </Typography>
-				<Router>
 					<div>
 						<Header />
 
@@ -169,7 +168,6 @@ export default function MiniDrawerIndex() {
 						<Route path="/about" component={About} />
 						<Route path="/topics" component={Topics} />
 					</div>
-				</Router>
 			</main>
 		</div>
 	);
