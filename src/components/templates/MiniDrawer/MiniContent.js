@@ -1,7 +1,7 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import logo from '../../../logo.svg';
-import RouteConfigExample from '../RouteConfigExample'
+import RouteConfigExample from '../../organisms/RouteConfigExample'
 
 export default function MiniDrawerIndex() {
     return (
