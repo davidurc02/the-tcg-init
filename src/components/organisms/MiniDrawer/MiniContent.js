@@ -1,6 +1,7 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import logo from '../../../logo.svg';
+import RouteConfigExample from '../RouteConfigExample'
 
 export default function MiniDrawerIndex() {
     return (
@@ -17,6 +18,8 @@ export default function MiniDrawerIndex() {
                 nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
                 accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.
             </Typography>
+
+            <RouteConfigExample />
         </>
     );
 }
