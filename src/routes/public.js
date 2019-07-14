@@ -6,7 +6,6 @@ import SectionOption3 from '../components/organisms/SectionOption3'
 export const publicRoutes = [
     {
         path: '/',
-        exact: true,
         component: MiniDrawer,
         routes: [
             {

@@ -8,4 +8,4 @@ export const allRoutes = [
 	...fallbackRoute
 ];
 
-export const routes = (props = {}) => renderRoutes(allRoutes, props);
+export const routes = (props) => renderRoutes(allRoutes, props);
