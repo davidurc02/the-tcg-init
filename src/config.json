@@ -1,0 +1,26 @@
+{
+	"dashboard": {
+		"navigation_labels": [
+			{
+				"label": "Option 1",
+				"id": "option1",
+				"icon": "HomeOutlined"
+			},
+			{
+				"label": "Option 2",
+				"id": "option2",
+				"icon": "SettingsInputAntennaOutlined"
+			},
+			{
+				"label": "Option 3",
+				"id": "option3",
+				"icon": "PersonOutlineOutlined"
+			},
+			{
+				"label": "Option 4",
+				"id": "option4",
+				"icon": "PersonAddOutlined"
+			}
+		]
+	}
+}
